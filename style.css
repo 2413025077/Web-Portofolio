@@ -1,178 +1,70 @@
-/* style.css */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio V2</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="header">
+    <div class="container">
+      <h1>My Portfolio</h1>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#tugas">Tugas</a>
+      </nav>
+    </div>
+  </header>
+  
+  
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    background-color: #f0f2f5;
-    color: #1e293b;
-    line-height: 1.6;
-  }
-  
-  header {
-    position: fixed;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.06);
-    z-index: 1000;
-    transition: background 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  header .container {
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-  }
-  
-  header h1 {
-    font-size: 2rem;
-    color: #0f172a;
-    font-weight: 700;
-  }
-  
-  nav a {
-    margin-left: 25px;
-    text-decoration: none;
-    color: #334155;
-    font-weight: 500;
-    transition: color 0.3s;
-  }
-  
-  nav a:hover {
-    color: #1e40af;
-  }
-  
-  .hero {
-    height: 100vh;
-    background: linear-gradient(rgba(30,41,59,0.4), rgba(30,41,59,0.6)), url('images/hero.jpg') center/cover no-repeat;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-  
-  .hero .overlay {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 3rem;
-    color: #f8fafc;
-    border-radius: 12px;
-    max-width: 700px;
-    backdrop-filter: blur(10px);
-  }
-  
-  .hero .overlay h2 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
-  }
-  
-  .about {
-    padding: 5rem 1rem;
-    background-color: #ffffff;
-    text-align: center;
-  }
-  
-  .about .card {
-    max-width: 900px;
-    margin: auto;
-    background-color: #e0f2fe;
-    padding: 3rem;
-    border-radius: 16px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .about .card img {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 1.5rem;
-    border: 4px solid #ffffff;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
-  }
-  
-  .about .card h2 {
-    margin-bottom: 1rem;
-    font-size: 2rem;
-    color: #1e293b;
-    font-weight: 600;
-  }
-  
-  .tugas {
-    padding: 5rem 1rem;
-    background-color: #f8fafc;
-  }
-  
-  .tugas h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 2rem;
-    color: #0f172a;
-  }
-  
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.5rem;
-    max-width: 1000px;
-    margin: auto;
-  }
-  
-  .task-card {
-    background-color: #ffffff;
-    padding: 1.8rem;
-    border-radius: 14px;
-    text-align: center;
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .task-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.08);
-  }
-  
-  .task-card h3 {
-    margin-bottom: 1rem;
-    color: #1e293b;
-    font-size: 1.3rem;
-  }
-  
-  .task-card a {
-    display: inline-block;
-    margin-top: 0.5rem;
-    padding: 0.7rem 1.4rem;
-    background-color: #3b82f6;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: background-color 0.3s;
-  }
-  
-  .task-card a:hover {
-    background-color: #1d4ed8;
-  }
-  
-  footer {
-    text-align: center;
-    padding: 2rem 1rem;
-    background-color: #0f172a;
-    color: white;
-    font-size: 0.95rem;
-    letter-spacing: 0.5px;
-  }
-  
+  <section id="home" class="hero">
+    <div class="overlay">
+      <h2>Selamat Datang</h2>
+      <p>Ini adalah portofolio pribadi saya</p>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="card">
+      <img src="image/profile.png" alt="Foto Profil">
+      <div class="card-content">
+        <h2>Ahmad Dendi Abadi</h2>
+        <p>Halo, saya adalah Ahmad Dendi Abadi bisa dipanggil dendi. Saya mahasiswa Universitas Lampung Prodi Pendidikan Teknologi Informasi. Npm saya adalah 2413025077</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="tugas" class="tugas">
+    <div class="container">
+      <h2>Tugas Saya</h2>
+      <div class="grid">
+        <div class="task-card">
+          <h3>Tugas 1 - Tokoh Perintis Grafika Komputer</h3>
+          <a href="https://drive.google.com/drive/folders/1Mp7fpd6Xad-sU7qptnNl3WFGkf8EhV5T" target="_blank">Lihat Tugas</a>
+        </div>
+        <div class="task-card">
+          <h3>Tugas 2 - Membuat Garis DDA dan Bresenham</h3>
+          <a href="https://drive.google.com/drive/folders/1N-zkUVAmXvnL6DJM8IO4la2uRiJiNYw6" target="_blank">Lihat Tugas</a>
+        </div>
+        <div class="task-card">
+          <h3>Tugas 3 - Membuat Lingkaran Midpoint dan Bresenham</h3>
+          <a href="https://drive.google.com/drive/folders/1N23Txf3-YxYyqkWFZCqxUgD30-wHU6jP" target="_blank">Lihat Tugas</a>
+        </div>
+        <div class="task-card">
+          <h3>Tugas 4 - Algoritma Pembentukan Kurva</h3>
+          <a href="https://drive.google.com/drive/folders/1N62eDdXihL_mZKINMY7DIF5oaZ3lQ9_K" target="_blank">Lihat Tugas</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; Ahmad Dendi Abadi 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
